@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <style>dialog{
+        text-align: center;
+        background-color: rgb(161, 0, 0);
+        width: 50%;
+        height: 800px;
+    }</style>
+</head>
+<body>
+    <button id="modal">открыть</button>
+    <dialog>
+        <p>Привет мир</p>
+        <img src="кокос.jpg">
+        <p><button id="close">закрыть</button></p>
+    </dialog>
+    <script>
+        var dialog = document.querySelector('dialog')
+        document.querySelector('#modal').onclick = function () {
+            dialog.showModal()
+        }
+        document.querySelector('#close').onclick = function () {
+            dialog.close ()
+        }
+    </script>
+</body>
+</html>
